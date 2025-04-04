@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pergunta de Namoro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f8ff;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+    .yes {
+      background-color: #4caf50;
+      color: white;
+    }
+    .no {
+      background-color: #f44336;
+      color: white;
+      cursor: not-allowed;
+    }
+    #heartImage {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Você quer namorar comigo?</h1>
+    <div class="buttons">
+      <button class="yes" id="yesButton">Sim</button>
+      <button class="no" id="noButton" disabled>Não</button>
+    </div>
+    <img id="heartImage" src="https://www.example.com/coracao.jpg" alt="Coração com a mensagem 'Te amo Gabryel'" width="200">
+  </div>
+
+  <script>
+    document.getElementById('yesButton').addEventListener('click', function() {
+      // Exibir a imagem do coração
+      document.getElementById('heartImage').style.display = 'block';
+      // Desabilitar o botão "Sim" após a escolha
+      document.getElementById('yesButton').disabled = true;
+      // Desabilitar o botão "Não" também
+      document.getElementById('noButton').disabled = true;
+    });
+  </script>
+</body>
+</html>
